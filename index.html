@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Assembleia de Deus Brás</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  
+</head>
+<body>
+  <div class="login-container">
+        <div class="church-logo">
+            <img src="logo.jpg" alt="Logo Assembleia de Deus Brás"> 
+        </div>
+        <h2>Assembleia de Deus Min. Brás</h2>
+        <p class="subtitle">Faça seu login para continuar</p>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="nome">Líder:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do Líder" required>
+            </div>
+            <div class="input-group">
+                <label for="ri">RI (Registro Interno) ou Senha:</label>
+                <input type="password" id="ri" name="ri" placeholder="Seu número de RI" required>
+            </div>
+            <p id="errorMessage" style="display: none;">Credenciais inválidas. Tente novamente.</p>
+            <button type="submit" class="login-button">Entrar</button>
+        </form>
+        <p class="footer-text">
+            Problemas para entrar? <a href="#">Entre em contato.</a>
+        </p>
+    </div>
+
+    <div id="myModal" class="modal-overlay">
+        <div class="modal-content">
+            <div id="modalHeader" class="modal-header"></div>
+            <p id="modalBody" class="modal-body"></p>
+            <button id="modalButton" class="modal-button">Fechar</button>
+        </div>
+    </div>
+
+</body>
+</html>
