@@ -100,7 +100,10 @@ loginForm.addEventListener("submit", async function (event) {
     let loginValido = false; // Flag para indicar se o login foi bem-sucedido
     // Extrai o primeiro nome do líder digitado e o converte para minúsculas para comparação não sensível a maiúsculas/minúsculas
     const primeiroNomeInput = liderInput.split(" ")[0].toLowerCase();
-    let nomeCompletoMembroLogado = ""; // Variável para armazenar o nome completo do membro logado
+   nomeCompletoMembroLogado = membro.Lider; // Captura o nome completo do membro logado (Nome do JSON)
+            
+            // Salva o nome completo do membro no localStorage para uso na próxima página
+            localStorage.setItem('nomeLiderLogado', nomeCompletoMembroLogado);
 
     // Itera sobre cada membro para tentar validar o login
     for (const membro of membros) {
